@@ -2,6 +2,8 @@ package com.example.composeanimationsapp.di
 
 import android.app.Application
 import cafe.adriel.voyager.core.registry.ScreenRegistry
+import com.example.composeanimationsapp.screens.catGallery.di.catGalleryScreenModule
+import com.example.composeanimationsapp.screens.loading.di.LoadingModule
 import com.example.composeanimationsapp.screens.loading.di.loadingScreenModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -13,6 +15,7 @@ class MainApp: Application() {
 
         ScreenRegistry {
             loadingScreenModule()
+            catGalleryScreenModule()
         }
 
         startKoin {
@@ -20,7 +23,7 @@ class MainApp: Application() {
             androidLogger()
             modules(
                 listOf(
-
+                    LoadingModule()
                 )
             )
         }

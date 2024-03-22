@@ -9,7 +9,7 @@ val Typography = Typography(
     headlineMedium = TextStyle(
         fontFamily = mainFont,
         fontWeight = FontWeight.Normal,
-        fontSize = 20.sp,
-        lineHeight = 24.sp
+        fontSize = 28.sp,
+        lineHeight = 32.sp
     )
 )
