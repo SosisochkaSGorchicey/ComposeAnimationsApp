@@ -24,3 +24,4 @@ rootProject.name = "ComposeAnimationsApp"
 include(":app")
 include(":data")
 include(":domain")
+include(":resources")
