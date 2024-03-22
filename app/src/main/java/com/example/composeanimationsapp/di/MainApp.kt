@@ -12,7 +12,7 @@ class MainApp: Application() {
         super.onCreate()
 
         ScreenRegistry {
-            loadingScreenModule
+            loadingScreenModule()
         }
 
         startKoin {
