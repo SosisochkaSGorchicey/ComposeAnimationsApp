@@ -2,4 +2,8 @@
 <resources>
     # Loading
     <string name="loading_text">Loading …</string>
+
+    # BottomBar
+    <string name="cat_gallery">Cat Gallery</string>
+    <string name="rick_and_morty">Rick and Morty</string>
 </resources>
