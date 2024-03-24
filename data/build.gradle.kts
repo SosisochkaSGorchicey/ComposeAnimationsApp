@@ -1,7 +1,14 @@
+import org.jetbrains.kotlin.konan.properties.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
+
+private val keystorePropertiesFile = file("app.properties")
+private val keystoreProperties = Properties()
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
 android {
     namespace = "com.example.data"
@@ -12,6 +19,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+
+        buildConfigField("String", "catApiKey", keystoreProperties.getProperty("CAT_API_KEY"))
     }
 
     buildTypes {
@@ -30,10 +39,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
-
+    implementation(libs.bundles.koin)
+    implementation(libs.bundles.network)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
