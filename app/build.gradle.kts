@@ -65,4 +65,5 @@ dependencies {
     implementation(libs.androidx.material)
 
     implementation(projects.resources)
+    implementation(projects.data)
 }
