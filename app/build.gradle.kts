@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.bundles.paging)
     implementation(libs.bundles.koin)
     implementation(libs.bundles.voyager)
     implementation(libs.orbit.core)
@@ -66,4 +67,5 @@ dependencies {
 
     implementation(projects.resources)
     implementation(projects.data)
+    implementation(projects.domain)
 }
