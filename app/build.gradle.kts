@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.coil.compose)
     implementation(libs.bundles.paging)
     implementation(libs.bundles.koin)
     implementation(libs.bundles.voyager)
