@@ -7,8 +7,9 @@ import kotlinx.coroutines.launch
 import org.orbitmvi.orbit.syntax.simple.intent
 import org.orbitmvi.orbit.syntax.simple.postSideEffect
 
-class LoadingViewModel : MviViewModel<Any, LoadingSideEffect, LoadingEvent>(initialState = Unit) {
-
+class LoadingViewModel : MviViewModel<Any, LoadingSideEffect, LoadingEvent>(
+    initialState = Unit
+) {
     init {
         onEvent(LoadingEvent.Init)
     }

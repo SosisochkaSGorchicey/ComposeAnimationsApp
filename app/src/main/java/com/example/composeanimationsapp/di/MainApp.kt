@@ -2,7 +2,6 @@ package com.example.composeanimationsapp.di
 
 import android.app.Application
 import cafe.adriel.voyager.core.registry.ScreenRegistry
-import com.example.composeanimationsapp.screens.catGallery.di.catGalleryScreenModule
 import com.example.composeanimationsapp.screens.loading.di.LoadingModule
 import com.example.composeanimationsapp.screens.loading.di.loadingScreenModule
 import com.example.data.di.NetworkModule
@@ -16,7 +15,7 @@ class MainApp : Application() {
 
         ScreenRegistry {
             loadingScreenModule()
-            catGalleryScreenModule()
+            screensScreenModule()
         }
 
         startKoin {
@@ -25,7 +24,8 @@ class MainApp : Application() {
             modules(
                 listOf(
                     LoadingModule(),
-                    NetworkModule()
+                    NetworkModule(),
+                    PresentationModule()
                 )
             )
         }
