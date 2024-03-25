@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.bundles.paging)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
