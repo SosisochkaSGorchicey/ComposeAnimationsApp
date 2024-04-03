@@ -6,4 +6,8 @@
     # BottomBar
     <string name="cat_gallery">Cat Gallery</string>
     <string name="rick_and_morty">Rick and Morty</string>
+
+    # Errors
+    <string name="error_occurred">Some error occurred\nCheck internet connection</string>
+    <string name="button_retry">Retry</string>
 </resources>

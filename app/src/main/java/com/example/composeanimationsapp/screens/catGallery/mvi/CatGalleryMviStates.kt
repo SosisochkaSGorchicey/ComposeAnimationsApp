@@ -14,8 +14,3 @@ data class CatGalleryState(
 sealed interface CatGalleryEvent {
     data object Init : CatGalleryEvent
 }
-
-//@Immutable
-//sealed interface LoadingSideEffect {
-//    data object NavigateToApp : LoadingSideEffect
-//}
